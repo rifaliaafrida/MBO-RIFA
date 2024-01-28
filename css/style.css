@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.buton{
+    display: flex;
+}
+.homepage{
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+    height: 500px;
+    margin:5% auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    grid-template-columns: 5fr 1fr;
+    grid-template-areas: 'navbar sidebar' 'content sidebar';  
+}
+
+ .nav-desk{
+    padding: 1% 5%;
+    list-style: none;
+    width: 90%;
+    height: min-content;
+    grid-area: navbar;
+    padding-top: 2%;
+    
+
+
+ }
+ #nav-image{
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+
+
+ }
+.menu{
+    width: max-content;
+    display: flex;
+    float: right;
+    margin: 5px 50px ;
+}
+
+#title-nav{
+    color: #4E554F;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
+padding: 0 1%;
+}
+#two{
+    color: #468448;
+}
+
+ nav ul li{
+    display: inline-block;
+
+    
+ }
+ .menu li{
+    margin: 0 2%;
+    font-weight: 600;
+    color: #4E554F;
+    font-family: Inter;
+    font-size: 15px;
+    padding: 0 3%;
+
+ }
+
+ .mobile{display: none;
+grid-area: navbar;}
+ .mobile-menu{
+    display: none;
+    grid-area: navbar;
+    padding: 10% 24%;
+    font-weight: 600;
+    color: #4E554F;
+    font-family: Inter;
+    font-size: 15px;
+ }
+
+ .hamburger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.line {
+    width: 25px;
+    height: 3px;
+    background-color:black ;
+    margin: 3px;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-nav-links li {
+    margin-bottom: 10px;
+}
+
+.mobile-nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+@media only screen and (max-width:500px){
+    .navbar{display: none;}
+    .mobile{display: inline-block;
+        list-style: none;
+        margin: 5%;
+}
+.hamburger
+{display: flex;
+float: right;
+position: relative;
+margin: 3% -20%;
+}
+.mobile-menu{
+    margin-left: 0;
+    margin-top: 30%;
+}
+.mobile-menu.active {
+    display: block;
+    margin:  10% 0 0 0;
+      }
+
+      .left{
+        width: 100%;
+        height: max-content;
+
+      }
+      #title{
+        margin: -20px 0;
+        width: 200px;
+      }
+      .picture-div{display: none;
+    }
+    .content{grid-template-columns: 1fr;}
+
+      #strawbery{display: none;}
+      #orange{display: none;}
+      #delima{
+        display: none;
+      }
+      .homepage{
+        width: 85%;
+        height: 420px;
+      }
+      .sidebar{
+        height: 50%;
+      }
+      .left #deskripsi{
+        margin: 15% 0 0 0;
+        width: 220px;
+      }
+      #shoping{
+        margin-top: 10%;
+      }
+      
+
+}
+
+ /*sidebar*/
+ .sidebar{
+    border-radius: 0  10px 10px 0;
+    background: #FFE281;
+    width: 100%;
+    height: 100%;
+    grid-area: sidebar;
+
+
+ }
+.content{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-areas: 'left right';
+    grid-area: content;
+    padding: 0 5%;
+   
+}
+.left{
+
+    margin: 20% 5%;
+    padding: 0 5%;
+    grid-area: content;
+    width: 100%;
+    height: max-content;
+    grid-area: left;
+
+
+}
+#title{
+    color: #468448;
+font-size: 2em;
+font-family: Playfair Display;
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
+
+}
+#next{
+    color: #4E554F;
+}
+.picture-div{
+    display: inline-block;
+    grid-area: right;
+    width: max-content;
+    margin-right: -100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'strawbery orang' 'strawbery delima';
+    column-gap: 30%;
+}
+#strawbery{
+    width: 150px;
+    height: 420px;
+    grid-area: strawbery;
+    margin-left: 60%;
+}
+#orange{
+    width: 170px;
+    grid-area: orang;
+}
+#delima{
+    width: 170px;
+    grid-area: delima;
+}
+#deskripsi{
+    display: flex;
+    color: var(--gray-1, #333);
+font-size: 15px;
+font-family: Inter;
+font-style: normal;
+font-weight: 400;
+margin: 5% 0;
+line-height: 100%;
+}
+#shoping{
+    display: flex;
+width: 170px;
+padding: 10.434px;
+align-items: center;
+gap: 12.521px;
+border-radius: 41.737px;
+border: 2.087px solid #FFF;
+background: var(--gray-1, #333);
+box-shadow: 0px 8.347428321838379px 16.694856643676758px 0px rgba(0, 0, 0, 0.08), 0px 0px 4.1737141609191895px 0px rgba(0, 0, 0, 0.04);
+}
+#bag{
+    width: 20px;
+    vertical-align: middle;}
+#start{
+    color: #FFF;
+font-size: 13px;
+font-family: Inter;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
